@@ -9,7 +9,7 @@ A modern, production-ready template for building full-stack React applications u
 - 📦 Asset bundling and optimization
 - 🔄 Data loading and mutations
 - 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
+- 🎉 Unocss for styling
 - 📖 [React Router docs](https://reactrouter.com/)
 
 ## Getting Started
@@ -19,7 +19,7 @@ A modern, production-ready template for building full-stack React applications u
 Install the dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Development
@@ -27,7 +27,13 @@ npm install
 Start the development server with HMR:
 
 ```bash
-npm run dev
+pnpm run dev
+```
+
+Start unocss engin:
+
+```bash
+pnpm run uno
 ```
 
 Your application will be available at `http://localhost:5173`.
@@ -37,7 +43,7 @@ Your application will be available at `http://localhost:5173`.
 Create a production build:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ## Deployment
@@ -64,8 +70,9 @@ npx wrangler versions deploy
 
 ## Styling
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This template comes with [UNOCSS](https://unocss.dev/) already configured for a simple default starting experience.
 
+you can switch to tailwindcss anytime you want 
 ---
 
 Built with ❤️ using React Router.
