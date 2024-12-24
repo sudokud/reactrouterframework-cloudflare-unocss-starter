@@ -13,8 +13,6 @@
 
 
 
-/* layer: shortcuts */
-.bgb{--un-bg-opacity:1;background-color:rgb(191 219 254 / var(--un-bg-opacity)) /* #bfdbfe */;}
 /* layer: default */
 .block,
 .dark .dark\:block{display:block;}

@@ -11,7 +11,7 @@ import {
 import type { Route } from "./+types/root";
 // styles [order matters]
 import reset from '@unocss/reset/tailwind.css?url' // 1
-import unocss from './uno.css?url'                 // 2
+import unocss from '~/uno.css?url'                 // 2
 import stylesheet from "./app.css?url";            // 3 
 
 export const links: Route.LinksFunction = () => [
