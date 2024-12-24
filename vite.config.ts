@@ -4,7 +4,7 @@ import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-
+import UnoCSS from 'unocss/vite'
 export default defineConfig(({ isSsrBuild }) => ({
   build: {
     rollupOptions: isSsrBuild
@@ -43,6 +43,7 @@ export default defineConfig(({ isSsrBuild }) => ({
         options.compatibilityFlags = ["nodejs_compat"];
       },
     }),
+    UnoCSS(),
     reactRouter(),
     tsconfigPaths(),
   ],

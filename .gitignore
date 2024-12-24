@@ -5,6 +5,9 @@
 /.react-router/
 /build/
 
+#unocss
+app/uno.css
+
 # Cloudflare
 .mf
 .wrangler

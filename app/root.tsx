@@ -5,10 +5,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  type MetaFunction,
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import stylesheet from "./app.css?url";
+// styles [order matters]
+import reset from '@unocss/reset/tailwind.css?url' // 1
+import unocss from '~/uno.css?url'                 // 2
+import stylesheet from "./app.css?url";            // 3 
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -21,9 +25,13 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  { rel: 'stylesheet', href: reset },
+  { rel: 'stylesheet', href: unocss },
   { rel: "stylesheet", href: stylesheet },
 ];
-
+export const meta: MetaFunction = () => [
+  { title: 'react router 7, unocss and motion' },
+]
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
